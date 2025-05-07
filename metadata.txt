@@ -10,7 +10,8 @@ author:Luiz Motta
 email:motta.luiz@gmail.com
 
 version:0.8
-qgisMinimumVersion:3.28
+qgisMinimumVersion:3.40
+supportsQt6=True
 
 experimental:False
 deprecated:False

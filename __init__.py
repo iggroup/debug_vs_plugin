@@ -60,7 +60,10 @@ class DebugVSPlugin(QObject):
 
         self.toolButton = QToolButton()
         self.toolButton.setMenu(QMenu())
-        self.toolButton.setPopupMode(QToolButton.MenuButtonPopup)
+        if "PyQt6" in sys.modules:
+            self.toolButton.setPopupMode(QToolButton.ToolButtonPopupMode.MenuButtonPopup)
+        else:
+            self.toolButton.setPopupMode(QToolButton.MenuButtonPopup)
         self.toolBtnAction = self.iface.addToolBarWidget(self.toolButton)
 
         self.msgBar = iface.messageBar()
